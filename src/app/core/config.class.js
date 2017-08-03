@@ -1449,7 +1449,7 @@ function ConfigObjectFactory(Geo, gapiService, common) {
 
             this._maximizeButton = source.maximizeButton;
             this._layerType = source.layerType;
-            this._expandFactor = source.expandFactor;
+            this._expandFactor = source.expandFactor || 2;
         }
 
         get maximizeButton () { return this._maximizeButton; }
