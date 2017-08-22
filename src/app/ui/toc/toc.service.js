@@ -12,7 +12,7 @@ angular
     .factory('tocService', tocService);
 
 function tocService($q, $rootScope, $mdToast, $translate, referenceService, common, stateManager, graphicsService,
-    geoService, metadataService, errorService, LegendBlock, configService, legendService) {
+    geoService, metadataService, errorService, LegendBlock, configService, legendService, layoutService) {
         
     const service = {
         // method called by the options and flags set on the layer item
@@ -76,7 +76,7 @@ function tocService($q, $rootScope, $mdToast, $translate, referenceService, comm
      */
     function removeLayer(legendBlock) {
         let openPanelName;
-        const [resolve, reject] = legendService.removeLegendBlock(legendBlock);
+        let [resolve, reject] = legendService.removeLegendBlock(legendBlock);
 
         // create notification toast
         const toast = {
@@ -234,7 +234,7 @@ function tocService($q, $rootScope, $mdToast, $translate, referenceService, comm
      * Opens table panel with data from the provided layer object (debounce).
      *
      * @function toggleLayerTablePanel
-     * @param  {Object} legendBlock legend block object whose data should be displayed.
+     * @param  {Object} entry legend block object whose data should be displayed.
      * @private
      */
     function debToggleLayerTablePanel(entry) {
