@@ -3,6 +3,7 @@
     <!-- TODO: add translate filters -->
 
     <md-button
+	    data-feat="togglevisibility"
         aria-label="{{ 'toc.menu.visibility.title' | translate }}"
         class="md-icon-button primary rv-icon-20"
         ng-click="$mdOpenMenu($event)"
@@ -14,6 +15,7 @@
     <md-menu-content rv-trap-focus="{{ ::self.appID }}" class="rv-menu rv-dense" width="4">
         <md-menu-item>
             <md-button
+				data-feat="showall"
                 ng-click="self.showAllLegendEntries()"
                 ng-disabled="self.isAllLegendEntriesVisible()"
                 aria-label="{{ 'toc.menu.visibility.allon' | translate }}">
@@ -24,6 +26,7 @@
 
         <md-menu-item>
             <md-button
+				data-feat="hideall"
                 ng-click="self.hideAllLegendEntries()"
                 ng-disabled="self.isAllLegendEntriesHidden()"
                 aria-label="{{ 'toc.menu.visibility.alloff' | translate }}">

@@ -1,5 +1,6 @@
 <div class="main-appbar rv-whiteframe-z2" ng-show="!self.stateManager.state.mainGeosearch.active">
     <md-button
+		data-feat="menuopen"
         translate
         aria-label="{{ 'appbar.aria.menu' | translate }}"
         class="md-icon-button black"
@@ -18,8 +19,9 @@
         <h2 class="md-headline" translate ng-if="self.stateManager.state.mainLoaderService.active">import.service.title</h2>
         <h2 class="md-headline" translate ng-if="self.stateManager.state.mainDetails.active">appbar.tooltip.pointInfo</h2>
     </div>
-
+ 
     <md-button
+	    data-feat="geosearch"
         aria-label="{{ 'appbar.aria.geosearch' | translate }}"
         class="md-icon-button primary rv-app-geosearch"
         ng-click="self.toggleGeosearch()"
@@ -28,9 +30,12 @@
         <md-icon md-svg-src="action:search"></md-icon>
     </md-button>
 
+	   
+    <!-- test of google tags data-feat= geosearch  pw sept2017-->
     <!-- workaround for AM issue where tooltips are not shown when inside a disabled element, see https://github.com/angular/material/issues/1667 -->
     <div
         class="md-icon-button primary rv-app-geosearch"
+		data-feat="geosearch"
         disabled="disabled"
         ng-if="self.geoSearch.externalApiError"
         aria-label="{{ 'appbar.aria.geosearch' | translate }}">
@@ -41,6 +46,7 @@
 
     <md-button
         aria-label="{{ 'nav.tooltip.basemap' | translate }}"
+		data-feat="basemap"
         class="md-icon-button primary"
         ng-click="self.openBasemapSelector()"
         ng-show="self.stateManager.state.mainToc.active">
@@ -53,6 +59,7 @@
     </span>
 
     <md-button
+		data-feat="layer-openclose"
         aria-label="{{ 'appbar.aria.pointInfo' | translate }}"
         class="md-icon-button primary"
         rv-help="details-button"
@@ -64,6 +71,7 @@
     </md-button>
 
     <md-button
+		data-feat="layer-openclose"
         aria-label="{{ 'appbar.aria.layers' | translate }}"
         class="md-icon-button primary"
         rv-help="toc-button"

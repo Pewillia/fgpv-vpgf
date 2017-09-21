@@ -4,6 +4,8 @@
     <md-tooltip md-delay="self.getTooltipDelay()" md-direction="{{ self.getTooltipDirection() }}">{{ self.block.name }}</md-tooltip>
 
     <md-button
+		data-feat={{self.block.name}}
+		data-uuid={{self.block.url}}
         ng-if="!self.isReorder"
         class="rv-body-button rv-button-square"
         ng-click="self.block.expanded = !self.block.expanded"
@@ -13,13 +15,15 @@
 
 <div class="rv-icon-24 rv-list-item-toggle">
     <md-icon class="rv-transform-default"
+	    data-feat={{self.block.name}}
+		data-uuid={{self.block.url}}
         ng-class="{ 'rv-rotate--180' : self.block.expanded && !self.isReorder }"
         md-svg-src="hardware:keyboard_arrow_down"></md-icon>
 </div>
 
 <div class="rv-list-item-content">
     <div class="rv-list-item-name"
-        rv-truncate-title="self.block.name"
+        rv-truncate-title="self.block.layername"
         rv-truncate-title-is-active="self.isNameTruncated">
     </div>
 </div>

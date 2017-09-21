@@ -3,27 +3,29 @@
     <!-- TODO: add translate filters -->
 
     <md-button
+		data-feat="addlayer"
         aria-label="{{ import.title | translate }}"
         class="md-icon-button primary rv-loader-add"
         ng-click="$mdOpenMenu($event)">
         <md-tooltip>{{ 'import.title' | translate }}</md-tooltip>
-        <md-icon md-svg-src="content:add"></md-icon>
+        <md-icon data-feat="addlayer" md-svg-src="content:add"></md-icon>
     </md-button>
 
     <md-menu-content rv-trap-focus="{{ ::self.appID }}" class="rv-menu rv-dense" width="4">
         <md-menu-item>
             <md-button
+				data-feat="importfile"
                 ng-click="self.openFileLoader()"
                 aria-label="{{ 'import.file.title' | translate }}">
-                <md-icon md-svg-icon="editor:insert_drive_file"></md-icon>
+                <md-icon data-feat="importfile" md-svg-icon="editor:insert_drive_file"></md-icon>
                 {{ 'import.file.title' | translate }}
             </md-button>
         </md-menu-item>
 
         <md-menu-item>
-            <md-button ng-click="self.openServiceLoader()"
+            <md-button 	data-feat="importservice" ng-click="self.openServiceLoader()"
                 aria-label="{{ 'import.service.title' | translate }}">
-                <md-icon md-svg-icon="file:cloud"></md-icon>
+                <md-icon data-feat="importservice" md-svg-icon="file:cloud"></md-icon>
                 {{ 'import.service.title' | translate }}
             </md-button>
         </md-menu-item>

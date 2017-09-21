@@ -37,6 +37,7 @@
     <md-menu md-position-mode="target-right target" class="rv-list-item-control"
         ng-if="::self.hasMenu()">
         <md-button
+			data-feat="reorder"
             aria-label="{{ 'toc.entry.aria.openData' | translate }}"
             class="md-icon-button rv-button-40 rv-icon-20"
             ng-click="$mdOpenMenu($event)">
@@ -45,16 +46,16 @@
 
         <md-menu-content rv-trap-focus="{{ ::self.appID }}" class="rv-menu rv-dense" width="4">
 
-            <rv-legend-control block="self.block" template="menu" name="metadata"></rv-legend-control>
-            <rv-legend-control block="self.block" template="menu" name="settings"></rv-legend-control>
-            <rv-legend-control block="self.block" template="menu" name="data"></rv-legend-control>
-            <rv-legend-control block="self.block" template="menu" name="symbology"></rv-legend-control>
+            <rv-legend-control  data-feat="metadata" block="self.block" template="menu" name="metadata"></rv-legend-control>
+            <rv-legend-control data-feat="settings" block="self.block" template="menu" name="settings"></rv-legend-control>
+            <rv-legend-control data-feat="data" block="self.block" template="menu" name="data"></rv-legend-control>
+            <rv-legend-control data-feat="menu" block="self.block" template="menu" name="symbology"></rv-legend-control>
 
             <md-menu-divider></md-menu-divider>
 
-            <rv-legend-control block="self.block" template="menu" name="boundary"></rv-legend-control>
-            <rv-legend-control block="self.block" template="menu" name="reload"></rv-legend-control>
-            <rv-legend-control block="self.block" template="menu" name="remove"></rv-legend-control>
+            <rv-legend-control data-feat="boundary" block="self.block" template="menu" name="boundary"></rv-legend-control>
+            <rv-legend-control data-feat="reload" block="self.block" template="menu" name="reload"></rv-legend-control>
+            <rv-legend-control data-feat="remove" block="self.block" template="menu" name="remove"></rv-legend-control>
 
         </md-menu-content>
     </md-menu>
