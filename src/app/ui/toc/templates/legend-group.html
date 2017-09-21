@@ -5,7 +5,7 @@
 
     <md-button
 		data-feat={{self.block.name}}
-		data-uuid={{self.block.url}}
+		data-uuid={{self.block.layername}}
         ng-if="!self.isReorder"
         class="rv-body-button rv-button-square"
         ng-click="self.block.expanded = !self.block.expanded"
@@ -16,7 +16,7 @@
 <div class="rv-icon-24 rv-list-item-toggle">
     <md-icon class="rv-transform-default"
 	    data-feat={{self.block.name}}
-		data-uuid={{self.block.url}}
+		data-uuid={{self.block.layername}}
         ng-class="{ 'rv-rotate--180' : self.block.expanded && !self.isReorder }"
         md-svg-src="hardware:keyboard_arrow_down"></md-icon>
 </div>
@@ -36,6 +36,8 @@
     <md-menu md-position-mode="target-right target" class="rv-list-item-control"
         ng-if="self.intersect(self.block.availableControls, ['metadata', 'settings', 'boundary', 'reload', 'remove']).length > 0">
         <md-button
+			data-feat={{self.block.name}}
+			data-uuid={{self.block.layername}}
             aria-label="{{ 'toc.entry.aria.openData' | translate }}"
             class="md-icon-button rv-button-40 rv-icon-20"
             ng-click="$mdOpenMenu($event)">
