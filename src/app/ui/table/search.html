@@ -6,10 +6,10 @@
         ng-model="self.searchText"
         ng-keyup="self.search()"
         placeholder="{{ 'filter.search.placeholder' | translate }}">
-    <md-button ng-show="self.searchText.length > 2" ng-click="self.clear()">
-        <md-icon md-svg-src="navigation:close"></md-icon>
+    <md-button data-feat="datatablesearch" ng-show="self.searchText.length > 2" ng-click="self.clear()">
+        <md-icon data-feat="datatablesearch" md-svg-src="navigation:close"></md-icon>
     </md-button>
-    <md-icon ng-show="self.searchText.length <= 2" md-svg-src="action:search">
+    <md-icon data-feat="datatablesearch" ng-show="self.searchText.length <= 2" md-svg-src="action:search">
         <md-tooltip>{{ 'filter.aria.table.search' | translate }}</md-tooltip>
     </md-icon>
 </md-input-container>

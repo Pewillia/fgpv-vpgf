@@ -1,5 +1,6 @@
 <div class="rv-button-group">
     <md-button
+		data-feat="tableapplyfilter"
         aria-label="{{ filter.table.apply | translate }}"
         class="rv-table-apply primary"
         rv-help="table-apply-button"
@@ -9,22 +10,24 @@
     </md-button>
 
     <md-button
+		data-feat="tableclearfilters"
         aria-label="{{ filter.table.clear.tooltip | translate }}"
         class="md-icon-button primary"
         rv-help="table-clear-button"
         ng-click="self.tableService.clearFilters()">
         <md-tooltip>{{ 'filter.table.clear.tooltip' | translate }}</md-tooltip>
-        <md-icon md-svg-src="community:filter"></md-icon>
+        <md-icon md-svg-src="community:filter">data-feat="tableclearfilters"</md-icon>
     </md-button>
 
     <span class="rv-table-divider"></span>
 
     <md-button
+		data-feat="tabletogglefilter"
         aria-label="{{ filter.table.setting.tooltip | translate }}"
         class="md-icon-button primary"
         rv-help="table-setting-button"
         ng-click="self.tableService.toggleSetting()">
         <md-tooltip>{{ 'filter.table.setting.tooltip' | translate }}</md-tooltip>
-        <md-icon md-svg-src="action:settings"></md-icon>
+        <md-icon md-svg-src="action:settings">data-feat="tabletogglefilter"</md-icon>
     </md-button>
 </div>

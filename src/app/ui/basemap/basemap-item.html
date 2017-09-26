@@ -28,6 +28,8 @@
     <span flex></span>
 
     <md-button
+		data-feat={{self.basemap.name}}
+		data-uuid={{self.basemap.url}}
         aria-label="{{ 'basemap.' + (self.isDescriptionVisible ? 'hide' : 'show') + 'description' | translate }}"
         class="md-icon-button rv-button-32 rv-icon-20"
         ng-class="{ selected: self.isDescriptionVisible }"
@@ -36,16 +38,18 @@
         <!-- I don't like tooltips here... -->
         <!--md-tooltip md-direction="top">I'm no tooltip.</md-tooltip-->
 
-        <md-icon md-svg-src="action:info{{ self.isDescriptionVisible ? '' : '_outline' }}"></md-icon>
+        <md-icon data-feat={{self.basemap.name}} data-uuid={{self.basemap.url}} md-svg-src="action:info{{ self.isDescriptionVisible ? '' : '_outline' }}"></md-icon>
 
     </md-button>
 </div>
 
 <div class="rv-basemap-check" ng-if="self.basemap.isSelected">
-    <md-icon md-svg-src="navigation:check" ></md-icon>
+    <md-icon data-feat={{self.basemap.name}} data-uuid={{self.basemap.url}} md-svg-src="navigation:check" ></md-icon>
 </div>
 
 <md-button
+	data-feat={{self.basemap.name}}
+	data-uuid={{self.basemap.url}}
     aria-label="{{ 'basemap.select' | translate }}"
     aria-describedby="{{ ::$root.uid($id) }}-basemap-desc"
     class="rv-body-button rv-button-square"

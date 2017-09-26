@@ -1,0 +1,1305 @@
+{
+    "version": "2.0",
+    "language": "en",
+    "ui": {
+        "fullscreen": true,
+        "navBar": {
+          "zoom": "buttons",
+          "extra": [
+            "fullscreen",
+            "geoLocator",
+            "home",
+            "help"
+          ]
+        },
+        "sideMenu": {
+          "logo": false
+        },
+        "about": {
+          "content": "Federal Geospatial Platform (FGP) - Active Wildfires in British Columbia"
+        },
+        "legend": {
+          "isOpen": {
+            "large": true,
+            "medium": true,
+            "small": false
+          }
+        }
+    },
+    "services": {
+      "proxyUrl": "http://167.40.64.74/wmsproxy/ws/wmsproxy/executeFromProxy",
+      "exportMapUrl": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+      "export": {
+        "title": {
+          "value": "Title"
+        },
+        "map": {},
+        "mapelements": {},
+        "legend": {},
+        "footnote": {
+          "value": "Federal Geospatial Platform (FGP) - Active Wildfires in British Columbia"
+        }
+      },
+      "search": {
+        "serviceUrls": {
+          "geoNames": "http://geogratis.gc.ca/services/geoname/en/geonames.json",
+          "geoLocation": "http://geogratis.gc.ca/services/geolocation/en/locate?q=",
+          "geoSuggest": "http://geogratis.gc.ca/services/geolocation/en/suggest?q=",
+          "provinces": "http://geogratis.gc.ca/services/geoname/en/codes/province.json",
+          "types": "http://geogratis.gc.ca/services/geoname/en/codes/concise.json"
+        }
+      }
+    },
+    "map": {
+      "initialBasemapId": "baseCBME_CBCE_HS_RO_3978",
+      "components": {
+        "geoSearch": {
+          "enabled": true,
+          "showGraphic": true,
+          "showInfo": true
+        },
+        "mouseInfo": {
+          "enabled": true,
+          "spatialReference": {
+            "wkid": 4326
+          }
+        },
+        "northArrow": {
+          "enabled": true
+        },
+        "basemap": {
+          "enabled": true
+        },
+        "overviewMap": {
+          "enabled": false,
+          "layerType": "imagery"
+        },
+        "scaleBar": {
+          "enabled": true
+        }
+      },
+      "extentSets": [
+        {
+          "id": "EXT_NRCAN_Lambert_3978",
+          "default": {
+            "xmin": -2349394.64743,
+            "ymin": 365873.85678,
+            "xmax": -1555643.05992,
+            "ymax": 1159625.44428
+          },
+          "spatialReference": {
+            "wkid": 3978
+          }
+        },
+        {
+          "id": "EXT_ESRI_World_AuxMerc_3857",
+          "default": {
+            "xmax": -12913409.67335,
+            "xmin": -14136402.12591,
+            "ymax": 7421355.22603,
+            "ymin": 6198362.77346
+          },
+          "spatialReference": {
+            "wkid": 102100,
+            "latestWkid": 3857
+          }
+        }
+      ],
+      "lodSets": [
+        {
+          "id": "LOD_NRCAN_Lambert_3978",
+          "lods": [
+            {
+                "level": 0,
+                "resolution": 38364.660062653464,
+                "scale": 145000000
+            },
+            {
+                "level": 1,
+                "resolution": 22489.62831258996,
+                "scale": 85000000
+            },
+            {
+                "level": 2,
+                "resolution": 13229.193125052918,
+                "scale": 50000000
+            },
+            {
+                "level": 3,
+                "resolution": 7937.5158750317505,
+                "scale": 30000000
+            },
+            {
+                "level": 4,
+                "resolution": 4630.2175937685215,
+                "scale": 17500000
+            },
+            {
+                "level": 5,
+                "resolution": 2645.8386250105837,
+                "scale": 10000000
+            },
+            {
+                "level": 6,
+                "resolution": 1587.5031750063501,
+                "scale": 6000000
+            },
+            {
+                "level": 7,
+                "resolution": 926.0435187537042,
+                "scale": 3500000
+            },
+            {
+                "level": 8,
+                "resolution": 529.1677250021168,
+                "scale": 2000000
+            },
+            {
+                "level": 9,
+                "resolution": 317.50063500127004,
+                "scale": 1200000
+            },
+            {
+                "level": 10,
+                "resolution": 185.20870375074085,
+                "scale": 700000
+            },
+            {
+                "level": 11,
+                "resolution": 111.12522225044451,
+                "scale": 420000
+            },
+            {
+                "level": 12,
+                "resolution": 66.1459656252646,
+                "scale": 250000
+            },
+            {
+                "level": 13,
+                "resolution": 38.36466006265346,
+                "scale": 145000
+            },
+            {
+                "level": 14,
+                "resolution": 22.48962831258996,
+                "scale": 85000
+            },
+            {
+                "level": 15,
+                "resolution": 13.229193125052918,
+                "scale": 50000
+            },
+            {
+                "level": 16,
+                "resolution": 7.9375158750317505,
+                "scale": 30000
+            },
+            {
+                "level": 17,
+                "resolution": 4.6302175937685215,
+                "scale": 17500
+            },
+            {
+                "level": 18,
+                "resolution": 2.6458386250105836,
+                "scale": 10000
+            },
+            {
+                "level": 19,
+                "resolution": 1.5875031750063502,
+                "scale": 6000
+            }
+          ]
+        },
+        {
+          "id": "LOD_ESRI_World_AuxMerc_3857",
+          "lods": [
+            {
+              "level": 0,
+              "resolution": 19567.87924099992,
+              "scale": 73957190.948944
+            },
+            {
+              "level": 1,
+              "resolution": 9783.93962049996,
+              "scale": 36978595.474472
+            },
+            {
+              "level": 2,
+              "resolution": 4891.96981024998,
+              "scale": 18489297.737236
+            },
+            {
+              "level": 3,
+              "resolution": 2445.98490512499,
+              "scale": 9244648.868618
+            },
+            {
+              "level": 4,
+              "resolution": 1222.992452562495,
+              "scale": 4622324.434309
+            },
+            {
+              "level": 5,
+              "resolution": 611.4962262813797,
+              "scale": 2311162.217155
+            },
+            {
+              "level": 6,
+              "resolution": 305.74811314055756,
+              "scale": 1155581.108577
+            },
+            {
+              "level": 7,
+              "resolution": 152.87405657041106,
+              "scale": 577790.554289
+            },
+            {
+              "level": 8,
+              "resolution": 76.43702828507324,
+              "scale": 288895.277144
+            },
+            {
+              "level": 9,
+              "resolution": 38.21851414253662,
+              "scale": 144447.638572
+            },
+            {
+              "level": 10,
+              "resolution": 19.10925707126831,
+              "scale": 72223.819286
+            },
+            {
+              "level": 11,
+              "resolution": 9.554628535634155,
+              "scale": 36111.909643
+            },
+            {
+              "level": 12,
+              "resolution": 4.77731426794937,
+              "scale": 18055.954822
+            },
+            {
+              "level": 13,
+              "resolution": 2.388657133974685,
+              "scale": 9027.977411
+            },
+            {
+              "level": 14,
+              "resolution": 1.1943285668550503,
+              "scale": 4513.988705
+            },
+            {
+              "level": 15,
+              "resolution": 0.5971642835598172,
+              "scale": 2256.994353
+            },
+            {
+              "level": 16,
+              "resolution": 0.29858214164761665,
+              "scale": 1128.497176
+            },
+            {
+              "level": 17,
+              "resolution": 0.14929107082380833,
+              "scale": 564.248588
+            },
+            {
+              "level": 18,
+              "resolution": 0.07464553541190416,
+              "scale": 282.124294
+            },
+            {
+              "level": 19,
+              "resolution": 0.03732276770595208,
+              "scale": 141.062147
+            },
+            {
+              "level": 20,
+              "resolution": 0.01866138385297604,
+              "scale": 70.5310735
+            }
+          ]
+        }
+      ],
+      "legend": {
+        "type": "structured",
+        "root": {
+          "name": "root",
+          "children": [
+            {
+              "name": "Fire Information",
+              "expanded": true,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "fire_note"
+                },
+                {
+                  "layerId": "active_fires",
+                  "symbologyStack": [
+                    {
+                      "image": "http://s-edm-schubert.nofc.cfs.nrcan.gc.ca/geoserver/wms/?REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&LAYER=bigfoot_fgp_current&FORMAT=image/png",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "hotspots_last24hrs"
+                },
+                {
+                  "layerId": "hot_spots_pink"
+                },
+                {
+                  "layerId": "bigfoot",
+                  "symbologyStack": [
+                    {
+                      "image": "/fgpv/map/egs/images/legendimages/FirePrediction.PNG",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "fire_perem_estim",
+                  "symbologyStack": [
+                    {
+                      "image": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms/?REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&LAYER=m3_polygons_current&FORMAT=image/png",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "smoke_forecast",
+                  "symbologyStack": [
+                    {
+                      "image": "http://s-edm-schubert.nofc.cfs.nrcan.gc.ca/geoserver/wms/?REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&LAYER=bluesky_fcst_today&FORMAT=image/png",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "fire_danger_for"
+                },
+                {
+                  "layerId": "fbp_fuels"
+                }
+              ]
+            },
+            {
+              "name": "Energy Infrastructure",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "pipelines"
+                },
+                {
+                  "layerId": "bc_hydro_trans_lines",
+                  "symbologyStack": [
+                    {
+                      "image": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.DRP_BCTC_TRANSMISSION_LINES_SP/ows?REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&LAYER=WHSE_IMAGERY_AND_BASE_MAPS.DRP_BCTC_TRANSMISSION_LINES_SP&FORMAT=image/png",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "dams"
+                },
+                {
+                  "layerId": "bc_dams"
+                },
+                {
+                  "layerId": "power_plants_100mw"
+                },
+                {
+                  "layerId": "renew_power_plants_1mw"
+                },
+                {
+                  "layerId": "remote_communities"
+                }
+              ]
+            },
+            {
+              "name": "Transportation Infrastructure",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "airports_navcan"
+                },
+                {
+                  "layerId": "airports",
+                  "symbologyStack": [
+                    {
+                      "image": "http://maps.geogratis.gc.ca/wms/toporama_en?REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&LAYER=aeronautical_network&FORMAT=image/gif",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "layerId": "bc_airports"
+                }
+              ]
+            },
+            {
+              "name": "Health and First Response",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "bc_first_resp_fac"
+                },
+                {
+                  "layerId": "bc_hospitals"
+                }
+              ]
+            },
+            {
+              "name": "Industrial Infrastructure",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "mills"
+                },
+                {
+                  "layerId": "og_e"
+                },
+                {
+                  "layerId": "pm_e"
+                },
+                                {
+                  "layerId": "mw_e"
+                },
+                                {
+                  "layerId": "t100ep_e"
+                }
+              ]
+            },
+            {
+              "name": "Federal Infrastructure",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "seismic_stations"
+                },
+                {
+                  "layerId": "dir_fed_real_property"
+                }
+              ]
+            },
+            {
+              "name": "People and Communities",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "bc_evac_alert"
+                },
+                {
+                  "layerId": "inuit_comm"
+                },
+                {
+                  "layerId": "first_nations"
+                },
+                {
+                  "layerId": "pop_census_2016"
+                },
+                {
+                  "layerId": "indig_lands_SGB"
+                }
+              ]
+            },
+            {
+              "name": "Weather",
+              "expanded": false,
+              "controls": [
+                "visibility",
+                "settings"
+              ],
+              "children": [
+                {
+                  "layerId": "wind_speed_dir"
+                },
+                {
+                  "layerId": "air_temp"
+                },
+                {
+                  "layerId": "rdpa_24hrs_qty_prep"
+                },
+                {
+                  "layerId": "rdpa_final_6hrs_qty_prep"
+                },
+                {
+                  "layerId": "rdpa_prel_6hrs_qty_prep"
+                }
+              ]
+            },
+            {
+              "name": "CBM - Transportation",
+              "expanded": false,
+              "controls": [
+                "visibility"
+              ],
+              "children": [
+                {
+                  "layerId": "baseCBMT_TXT_3978_layer",
+                  "symbologyStack": [
+                    {
+                      "image": "/fgpv/map/egs/images/null.png",
+                      "text": ""
+                    }
+                ]
+                },
+                {
+                  "layerId": "baseCBMT_CBCT_GEOM_3978_layer",
+                  "symbologyStack": [
+                    {
+                      "image": "/fgpv/map/egs/images/null.png",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "layers": [
+          {
+            "id": "fire_note",
+            "name": "Fire of Note",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/EGS/FiresOfNote/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                },
+                {
+                    "index": 1
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": true
+            }
+          },
+          {
+            "id": "active_fires",
+            "name": "Active Fires",
+            "layerType": "ogcWms",
+            "url": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms",
+            "layerEntries": [
+              {
+                "id": "activefires_current"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": true
+            }
+          },
+          {
+            "id": "hotspots_last24hrs",
+            "name": "Hot Spots Last 24hrs",
+            "layerType": "ogcWms",
+            "url": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms",
+            "layerEntries": [
+              {
+                "id": "hotspots_last24hrs3class"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "hot_spots_pink",
+            "name": "Hot Spots from Pink Matter",
+            "layerType": "esriDynamic",
+            "url": "http://webservices.maps.canada.ca/arcgis/rest/services/NRCan/canada_forest_fires_2017/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bigfoot",
+            "name": "Bigfoot",
+            "layerType": "ogcWms",
+            "url": "http://s-edm-schubert.nofc.cfs.nrcan.gc.ca/geoserver/wms",
+            "layerEntries": [
+              {
+                "id": "bigfoot_fgp_current"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": true,
+              "opacity": 0.6
+            }
+          },
+          {
+            "id": "fire_perem_estim",
+            "name": "Fire Perimeter Estimate",
+            "layerType": "ogcWms",
+            "url": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms",
+            "layerEntries": [
+              {
+                "id": "m3_polygons_current"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": true,
+              "opacity": 0.6
+            }
+          },
+          {
+            "id": "smoke_forecast",
+            "name": "Today's Smoke Forecast",
+            "layerType": "ogcWms",
+            "url": "http://s-edm-schubert.nofc.cfs.nrcan.gc.ca/geoserver/wms",
+            "layerEntries": [
+              {
+                "id": "bluesky_fcst_today"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "fire_danger_for",
+            "name": "Fire Danger Forecast",
+            "layerType": "ogcWms",
+            "url": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms",
+            "layerEntries": [
+              {
+                "id": "fdr_current"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "fbp_fuels",
+            "name": "Forest Fire Behavior Prediction",
+            "layerType": "ogcWms",
+            "url": "http://maps.nofc.cfs.nrcan.gc.ca/geoserver/public/wms",
+            "layerEntries": [
+              {
+                "id": "nat_fbpfuels"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "pipelines",
+            "name": "Pipelines",
+            "layerType": "ogcWms",
+            "url": "http://backend-0-geoserve-11yujmn1tagqv-1134795541.us-west-2.elb.amazonaws.com/geoserver/CEPA/wms",
+            "layerEntries": [
+              {
+                "id": "pipeline"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": true
+            }
+          },
+          {
+            "id": "bc_hydro_trans_lines",
+            "name": "BC Hydro Transmission Lines (kVolts)",
+            "layerType": "ogcWms",
+            "url": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.DRP_BCTC_TRANSMISSION_LINES_SP/ows",
+            "layerEntries": [
+              {
+                "id": "WHSE_IMAGERY_AND_BASE_MAPS.DRP_BCTC_TRANSMISSION_LINES_SP"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": true
+            }
+          },
+          {
+            "id": "dams",
+            "name": "Dams",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/remote_communities_2017/MapServer",
+            "layerEntries": [
+                {
+                    "index": 10
+                },
+                {
+                    "index": 11
+                },
+                {
+                    "index": 12
+                }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bc_dams",
+            "name": "BC Dams",
+            "layerType": "ogcWms",
+            "url": "https://openmaps.gov.bc.ca/geo/pub/WHSE_WATER_MANAGEMENT.WRIS_DAMS_PUBLIC_SVW/ows",
+            "layerEntries": [
+              {
+                "id": "pub:WHSE_WATER_MANAGEMENT.WRIS_DAMS_PUBLIC_SVW"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "power_plants_100mw",
+            "name": "Power Plants, 100 MW or more",
+            "layerType": "esriFeature",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/NACEI/energy_infrastructure_of_north_america_en/MapServer/15",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "renew_power_plants_1mw",
+            "name": "Renewable Energy Power Plants, 1 MW or more",
+            "layerType": "esriFeature",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/NACEI/energy_infrastructure_of_north_america_en/MapServer/28",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "remote_communities",
+            "name": "Remote Communities by Main Power Source",
+            "layerType": "esriFeature",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/FGP/remote_communities_2017/MapServer/0",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "airports_navcan",
+            "name": "Airports with NAV-CAN services",
+            "layerType": "esriDynamic",
+            "url": "http://webservices.maps.canada.ca/arcgis/rest/services/TC/canadian_airports_w_air_navigation_services_en/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "airports",
+            "name": "Airports",
+            "layerType": "ogcWms",
+            "url": "http://wms.ess-ws.nrcan.gc.ca/wms/toporama_en",
+            "layerEntries": [
+              {
+                "id": "aeronautical_network"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bc_airports",
+            "name": "BC Airports",
+            "layerType": "ogcWms",
+            "url": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_AIRPORTS_SVW/ows?service=WMS&request=GetCapabilities",
+            "layerEntries": [
+              {
+                "id": "pub:WHSE_IMAGERY_AND_BASE_MAPS.GSR_AIRPORTS_SVW"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bc_first_resp_fac",
+            "name": "BC First Response Facilitites",
+            "layerType": "ogcWms",
+            "url": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_FIRST_RESPONDERS_SVW/ows?service=WMS&request=GetCapabilities",
+            "layerEntries": [
+              {
+                "id": "pub:WHSE_IMAGERY_AND_BASE_MAPS.GSR_FIRST_RESPONDERS_SVW"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bc_hospitals",
+            "name": "BC Hospitals",
+            "layerType": "ogcWms",
+            "url": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_HOSPITALS_SVW/ows?service=WMS&request=GetCapabilities",
+            "layerEntries": [
+              {
+                "id": "pub:WHSE_IMAGERY_AND_BASE_MAPS.GSR_HOSPITALS_SVW"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "mills",
+            "name": "Mills",
+            "layerType": "ogcWms",
+            "url": "http://s-edm-schubert.nofc.cfs.nrcan.gc.ca/geoserver/wms",
+            "layerEntries": [
+              {
+                "id": "deoc_temp:Mills_group"
+              }
+            ],
+            "featureInfoMimeType": "text/html",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "og_e",
+            "name": "Oil and Gas",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/MMS/OG_E/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "pm_e",
+            "name": "Producing Mines",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/MMS/PM_E/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                },
+                {
+                    "index": 1
+                },
+                {
+                    "index": 2
+                },
+                {
+                    "index": 3
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "mw_e",
+            "name": "Metallurgical Works",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/MMS/MW_E/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                },
+                {
+                    "index": 1
+                },
+                {
+                    "index": 2
+                },
+                {
+                    "index": 3
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "t100ep_e",
+            "name": "Top 100 Exploration Projects",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/MMS/T100EP_E/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "seismic_stations",
+            "name": "Seismic Stations",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/EGS/SeismicBC/MapServer",
+            "layerEntries": [
+                {
+                    "index": 0
+                }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "dir_fed_real_property",
+            "name": "Directory of Federal Real Property",
+            "layerType": "esriFeature",
+            "url": "http://services1.arcgis.com/VrOlGiblUSWCQy8E/ArcGIS/rest/services/Directory_of_Federal_Real_Property/FeatureServer/0",
+            "state": {
+              "visibility": false,
+              "opacity": 0.5
+            }
+          },
+          {
+            "id": "inuit_comm",
+            "name": "Inuit_Communities",
+            "layerType": "esriDynamic",
+            "url": "http://data.aadnc-aandc.gc.ca/geomatics/rest/services/Donnees_Ouvertes-Open_Data/Collectivite_Inuite_Inuit_Community/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "bc_evac_alert",
+            "name": "Evacuation Orders and Alerts",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/EGS/BC_EVACUATION_PT/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": true
+            }
+          },
+          {
+            "id": "first_nations",
+            "name": "First_Nations",
+            "layerType": "esriDynamic",
+            "url": "http://data.aadnc-aandc.gc.ca/geomatics/rest/services/Donnees_Ouvertes-Open_Data/Premiere_Nation_First_Nation/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "pop_census_2016",
+            "name": "Population - Census 2016 ",
+            "layerType": "esriDynamic",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/EGS/2016_BC_CENSUS/MapServer",
+            "layerEntries": [
+              {
+                "index": 0
+              },
+              {
+                "index": 6
+              }
+            ],
+            "singleEntryCollapse": true,
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "indig_lands_SGB",
+            "name": "Indigenous Lands - SGB",
+            "layerType": "esriFeature",
+            "url": "http://proxyinternet.nrcan.gc.ca/arcgis/rest/services/CLSS-SATC/CLSS_Administrative_Boundaries/MapServer/0",
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "wind_speed_dir",
+            "name": "Wind Speed and Direction",
+            "layerType": "ogcWms",
+            "url": "http://geo.weather.gc.ca/geomet/",
+            "layerEntries": [
+              {
+                "id": "HRDPS.CONTINENTAL_UU"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "air_temp",
+            "name": "Air Temperature",
+            "layerType": "ogcWms",
+            "url": "http://geo.weather.gc.ca/geomet/",
+            "layerEntries": [
+              {
+                "id": "RDPS.ETA_TT"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "rdpa_24hrs_qty_prep",
+            "name": "Quantity of precipitation - 24 hours",
+            "layerType": "ogcWms",
+            "url": "http://geo.weather.gc.ca/geomet/",
+            "layerEntries": [
+              {
+                "id": "RDPA.24F_PR"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "rdpa_final_6hrs_qty_prep",
+            "name": "Quantity of precipitation - final 6 hours",
+            "layerType": "ogcWms",
+            "url": "http://geo.weather.gc.ca/geomet/",
+            "layerEntries": [
+              {
+                "id": "RDPA.6F_PR"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "rdpa_prel_6hrs_qty_prep",
+            "name": "Quantity of precipitation - preliminary 6 hours",
+            "layerType": "ogcWms",
+            "url": "http://geo.weather.gc.ca/geomet/",
+            "layerEntries": [
+              {
+                "id": "RDPA.6P_PR"
+              }
+            ],
+            "state": {
+              "visibility": false
+            }
+          },
+          {
+            "id": "baseCBMT_TXT_3978_layer",
+            "name": "CBM - Text",
+            "layerType": "esriTile",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_TXT_3978/MapServer",
+            "state": {
+              "visibility": true,
+              "opacity": 1
+            }
+          },
+          {
+            "id": "baseCBMT_CBCT_GEOM_3978_layer",
+            "name": "CBM - Geometry",
+            "layerType": "esriTile",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer",
+            "state": {
+              "visibility": true,
+              "opacity": 0.8
+            }
+          }
+      ],
+      "tileSchemas": [
+        {
+          "id": "EXT_NRCAN_Lambert_3978#LOD_NRCAN_Lambert_3978",
+          "name": "Lambert Maps",
+          "extentSetId": "EXT_NRCAN_Lambert_3978",
+          "lodSetId": "LOD_NRCAN_Lambert_3978"
+        },
+        {
+          "id": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857",
+          "name": "Web Mercator Maps",
+          "extentSetId": "EXT_ESRI_World_AuxMerc_3857",
+          "lodSetId": "LOD_ESRI_World_AuxMerc_3857"
+        }
+      ],
+      "baseMaps": [
+      {
+        "id": "baseCBME_CBCE_HS_RO_3978",
+        "name": "Canada Base Map - Elevation (CBME)",
+        "description": "The Canada Base Map - Elevation (CBME) web mapping services of the Earth Sciences Sector at Natural Resources Canada, is intended primarily for online mapping application users and developers.",
+        "altText": "altText - Canada Base Map - Elevation (CBME)",
+        "layers": [
+          {
+            "id": "CBME_CBCE_HS_RO_3978",
+            "layerType": "esriFeature",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBME_CBCE_HS_RO_3978/MapServer"
+          }
+        ],
+        "tileSchemaId": "EXT_NRCAN_Lambert_3978#LOD_NRCAN_Lambert_3978"
+      },
+      {
+        "id": "baseSimple",
+        "name": "Canada Base Map - Simple",
+        "description": "Canada Base Map - Simple",
+        "altText": "altText - Canada base map - Simple",
+        "layers": [
+          {
+            "id": "SMR",
+            "layerType": "esriFeature",
+            "url": "http://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/Simple/MapServer"
+          }
+        ],
+        "tileSchemaId": "EXT_NRCAN_Lambert_3978#LOD_NRCAN_Lambert_3978"
+      },
+        {
+          "id": "baseEsriWorld",
+          "name": "World Imagery",
+          "description": "World Imagery provides one meter or better satellite and aerial imagery in many parts of the world and lower resolution satellite imagery worldwide.",
+          "altText": "altText - World Imagery",
+          "layers": [
+            {
+              "id": "World_Imagery",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        },
+        {
+          "id": "baseEsriPhysical",
+          "name": "World Physical Map",
+          "description": "This map presents the Natural Earth physical map at 1.24km per pixel for the world and 500m for the coterminous United States.",
+          "altText": "altText - World Physical Map",
+          "layers": [
+            {
+              "id": "World_Physical_Map",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Physical_Map/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        },
+        {
+          "id": "baseEsriRelief",
+          "name": "World Shaded Relief",
+          "description": "This map portrays surface elevation as shaded relief. This map is used as a basemap layer to add shaded relief to other GIS maps, such as the ArcGIS Online World Street Map.",
+          "altText": "altText - World Shaded Relief",
+          "layers": [
+            {
+              "id": "World_Shaded_Relief",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Shaded_Relief/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        },
+        {
+          "id": "baseEsriStreet",
+          "name": "World Street Map",
+          "description": "This worldwide street map presents highway-level data for the world.",
+          "altText": "altText - ESWorld Street Map",
+          "layers": [
+            {
+              "id": "World_Street_Map",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        },
+        {
+          "id": "baseEsriTerrain",
+          "name": "World Terrain Base",
+          "description": "This map is designed to be used as a base map by GIS professionals to overlay other thematic layers such as demographics or land cover.",
+          "altText": "altText - World Terrain Base",
+          "layers": [
+            {
+              "id": "World_Terrain_Base",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Terrain_Base/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        },
+        {
+          "id": "baseEsriTopo",
+          "name": "World Topographic Map",
+          "description": "This map is designed to be used as a basemap by GIS professionals and as a reference map by anyone.",
+          "altText": "altText - World Topographic Map",
+          "layers": [
+            {
+              "id": "World_Topo_Map",
+              "layerType": "esriFeature",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer"
+            }
+          ],
+          "tileSchemaId": "EXT_ESRI_World_AuxMerc_3857#LOD_ESRI_World_AuxMerc_3857"
+        }
+      ]
+    }
+}

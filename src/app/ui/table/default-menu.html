@@ -2,10 +2,11 @@
     <md-menu md-position-mode="target-right target">
 
         <md-button
+			data-feat="menubardatatable"
             aria-label="{{ 'filter.aria.menu' | translate }}"
             class="md-icon-button black rv-button-24"
             ng-click="$mdOpenMenu($event)">
-            <md-icon md-svg-src="navigation:more_vert"></md-icon>
+            <md-icon md-svg-src="navigation:more_vert">data-feat="menubardatatable"</md-icon>
         </md-button>
 
         <md-menu-content rv-trap-focus="{{::self.appID}}" class="rv-menu rv-dense" width="5">
@@ -49,15 +50,17 @@
             <md-menu-divider></md-menu-divider>
 
             <md-menu-item>
-                <md-button ng-click="self.dataPrint()">
-                    <md-icon md-svg-icon="action:print"></md-icon>
+                <md-button data-feat="printtable" ng-click="self.dataPrint()">
+					
+                    <md-icon md-svg-icon="action:print"> data-feat="printdatatable" </md-icon>
                     {{ 'filter.menu.print' | translate }}
                 </md-button>
             </md-menu-item>
 
             <md-menu-item>
-                <md-button ng-click="self.dataExportCSV()">
-                    <md-icon md-svg-icon="editor:insert_drive_file"></md-icon>
+                <md-button data-feat="exporttablecsv" ng-click="self.dataExportCSV()">
+					
+                    <md-icon md-svg-icon="editor:insert_drive_file">  data-feat="exporttablecsv" </md-icon>
                     {{ 'filter.menu.export' | translate }}
                 </md-button>
             </md-menu-item>
